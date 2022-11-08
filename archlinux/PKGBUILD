@@ -1,18 +1,20 @@
 # Maintainer: justforlxz <justforlxz@gmail.com>
-pkgname=dtkcommon-git
+pkgname=dtkcommon
 pkgver=5.5.17.r8.gfe3dd87
-pkgrel=1
+pkgrel=0
 pkgdesc='DTK common modules'
 arch=('x86_64' 'aarch64')
 url="https://github.com/linuxdeepin/dtkcommon"
 license=('LGPL3')
-depends=()
+depends=('cpio')
 makedepends=('git' 'cmake' 'ninja')
 conflicts=('dtkcore-git<5.4.0' 'dtkcore<5.4.0' 'dtkgui-git<5.4.0' 'dtkgui<5.4.0' 'dtkcommon')
 providers=('dtkcore-git' 'dtkgui-git')
 groups=('deepin-git')
-source=('source.tar.gz')
+
+source=("${pkgname}-${pkgver}.tar.gz")
 sha512sums=('SKIP')
+md5sums=('SKIP')
 
 build() {
   cd $deepin_source_name
