@@ -1,6 +1,23 @@
-workflow:
+testbuild:
   steps:
-    - branch_package:
+    - link_package:
         source_project: home:Tsic:src
         source_package: dtkcommon
         target_project: home:Tsic:CI
+    - configure_repositories:
+        project: home:Tsic:CI
+        repositories:
+          - name: Arch
+            paths:
+              - target_project: home:Tsic:src
+                target_repository: Arch
+            architectures:
+              - x86_64
+          - name: Debian_10
+            paths:
+              - target_project: home:Tsic:src
+                target_repository: Debian_10
+            architectures:
+              - x86_64
+  filters:
+    event: pull_request
