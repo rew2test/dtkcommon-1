@@ -6,18 +6,17 @@ pkgdesc='DTK common modules'
 arch=('x86_64' 'aarch64')
 url="https://github.com/linuxdeepin/dtkcommon"
 license=('LGPL3')
-depends=('cpio')
 makedepends=('git' 'cmake' 'ninja')
 conflicts=('dtkcore-git<5.4.0' 'dtkcore<5.4.0' 'dtkgui-git<5.4.0' 'dtkgui<5.4.0' 'dtkcommon')
 providers=('dtkcore-git' 'dtkgui-git')
 groups=('deepin-git')
 
-source=("${pkgname}-${pkgver}.tar.gz")
+source=("${pkgname}-${pkgver}.tar.xz")
 sha512sums=('SKIP')
 md5sums=('SKIP')
 
 build() {
-  cd $deepin_source_name
+  cd ${pkgname}-${pkgver}
   cmake -GNinja \
     -DCMAKE_INSTALL_LIBDIR=/usr/lib \
     -DLINUXNAME="archlinux" \
@@ -26,6 +25,6 @@ build() {
 }
 
 package() {
-  cd $deepin_source_name
+  cd ${pkgname}-${pkgver}
   DESTDIR="$pkgdir" ninja install
 }
