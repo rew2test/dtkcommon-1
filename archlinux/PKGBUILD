@@ -16,7 +16,7 @@ sha512sums=('SKIP')
 md5sums=('SKIP')
 
 build() {
-  cd ${pkgname}-${pkgver}
+  cd ${pkgname}
   cmake -GNinja \
     -DCMAKE_INSTALL_LIBDIR=/usr/lib \
     -DLINUXNAME="archlinux" \
@@ -25,6 +25,6 @@ build() {
 }
 
 package() {
-  cd ${pkgname}-${pkgver}
+  cd ${pkgname}
   DESTDIR="$pkgdir" ninja install
 }
