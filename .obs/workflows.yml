@@ -1,5 +1,13 @@
 testbuild:
   steps:
+    - set_flags:
+        flags:
+        - type: build
+            status: enable
+            project: home:Tsic:CI
+            pacakge: dtkcommon
+            repository: Arch
+            architecture: x86_64
     - link_package:
         source_project: home:Tsic:src
         source_package: dtkcommon
