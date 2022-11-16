@@ -1,4 +1,4 @@
-dtkcommon (5.5.23) unstable; urgency=medium
+dtkcommon (5.5.25) unstable; urgency=medium
 
   * use CMakeLists.txt to build package
 
