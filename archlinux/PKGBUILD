@@ -11,12 +11,12 @@ conflicts=('dtkcore-git<5.4.0' 'dtkcore<5.4.0' 'dtkgui-git<5.4.0' 'dtkgui<5.4.0'
 providers=('dtkcore-git' 'dtkgui-git')
 groups=('deepin-git')
 
-source=("${pkgname}-${pkgver}.tar.xz")
+source=("${pkgname}_${pkgver}.tar.xz")
 sha512sums=('SKIP')
 md5sums=('SKIP')
 
 build() {
-  cd ${pkgname}-${pkgver}
+  cd ${pkgname}
   cmake -GNinja \
     -DCMAKE_INSTALL_LIBDIR=/usr/lib \
     -DLINUXNAME="archlinux" \
@@ -25,6 +25,6 @@ build() {
 }
 
 package() {
-  cd ${pkgname}-${pkgver}
+  cd ${pkgname}
   DESTDIR="$pkgdir" ninja install
 }
