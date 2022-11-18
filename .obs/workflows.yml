@@ -1,15 +1,15 @@
 testbuild:
   steps:
     - link_package:
-        source_project: home:Tsic:src
+        source_project: deepin:test:SRC
         source_package: dtkcommon
-        target_project: home:Tsic:CI
+        target_project: deepin:test:CI
     - configure_repositories:
         project: home:Tsic:CI
         repositories:
           - name: Arch
             paths:
-              - target_project: home:Tsic:src
+              - target_project: deepin:test:CI
                 target_repository: Arch
             architectures:
               - x86_64
