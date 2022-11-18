@@ -5,7 +5,7 @@ testbuild:
         source_package: dtkcommon
         target_project: deepin:test:CI
     - configure_repositories:
-        project: home:Tsic:CI
+        project: deepin:test:CI
         repositories:
           - name: Arch
             paths:
