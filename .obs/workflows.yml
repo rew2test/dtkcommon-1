@@ -1,6 +1,6 @@
 testbuild:
   steps:
-    - branch:
+    - branch_package:
         source_project: deepin:test:SRC
         source_package: dtkcommon
         target_project: deepin:test:CI
