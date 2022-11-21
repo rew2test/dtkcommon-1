@@ -29,7 +29,7 @@ testbuild:
               - x86_64
               - aarch64
               - riscv64
-           - name: Uos_20
+          - name: Uos_20
             paths:
               - target_project: deepin:test:CI
                 target_repository: Arch_Community
