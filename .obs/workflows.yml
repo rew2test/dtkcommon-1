@@ -36,7 +36,7 @@ testbuild:
             architectures:
               - x86_64
            
-   - link_package:
+    - link_package:
         source_project: deepin:test:SRC
         source_package: dtkcommon
         target_project: deepin:test:CI
