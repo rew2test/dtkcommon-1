@@ -7,10 +7,10 @@ pullrequest_check_build:
     - configure_repositories:
         project: deepin:test:CI
         repositories:
-          - name: 15.4
+          - name: Arch
             paths:
               - target_project: deepin:test:SRC
-                target_repository: Arch
+                target_repository: Arch_Community
             architectures:
               - x86_64
   filters:
