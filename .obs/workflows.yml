@@ -5,11 +5,11 @@ pullrequest_check_build:
         source_package: dtkcommon
         target_project: deepin:test:CI
     - configure_repositories:
-        project: deepin:test:SRC
+        project: deepin:test:CI
         repositories:
           - name: 15.4
             paths:
-              - target_project: deepin:test:CI
+              - target_project: deepin:test:SRC
                 target_repository: Arch
             architectures:
               - x86_64
