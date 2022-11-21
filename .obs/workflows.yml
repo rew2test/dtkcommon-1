@@ -1,9 +1,17 @@
-testbuild:
+pullrequest_check_build:
   steps:
-    - branch_package:
+    - link_package:
         source_project: deepin:test:SRC
         source_package: dtkcommon
         target_project: deepin:test:CI
+    - configure_repositories:
+        project: deepin:test:SRC
+        repositories:
+          - name: 15.4
+            paths:
+              - target_project: deepin:test:CI
+                target_repository: Arch
+            architectures:
+              - x86_64
   filters:
     event: pull_request
-
