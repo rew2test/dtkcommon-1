@@ -42,3 +42,4 @@ testbuild:
         target_project: deepin:test:CI
   filters:
     event: pull_request
+
