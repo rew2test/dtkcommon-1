@@ -7,10 +7,10 @@ testbuild:
     - configure_repositories:
         project: deepin:test:CI
         repositories:
-          - name: Arch
+          - name: Arch_Community
             paths:
               - target_project: deepin:test:CI
-                target_repository: Arch
+                target_repository: Arch_Community
             architectures:
               - x86_64
   filters:
