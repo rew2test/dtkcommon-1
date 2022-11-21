@@ -1,42 +1,6 @@
 testbuild:
   steps:
-    - configure_repositories:
-        project: deepin:test:CI
-        repositories:
-          - name: Arch_Community
-            paths:
-              - target_project: deepin:test:CI
-                target_repository: Arch_Community
-            architectures:
-              - x86_64
-          - name: Debian_Sid
-            paths:
-              - target_project: deepin:test:CI
-                target_repository: Arch_Community
-            architectures:
-              - x86_64
-          - name: Deepin_20
-            paths:
-              - target_project: deepin:test:CI
-                target_repository: Arch_Community
-            architectures:
-              - x86_64
-          - name: Deepin_23
-            paths:
-              - target_project: deepin:test:CI
-                target_repository: Arch_Community
-            architectures:
-              - x86_64
-              - aarch64
-              - riscv64
-          - name: Uos_20
-            paths:
-              - target_project: deepin:test:CI
-                target_repository: Arch_Community
-            architectures:
-              - x86_64
-           
-    - link_package:
+    - branch:
         source_project: deepin:test:SRC
         source_package: dtkcommon
         target_project: deepin:test:CI
