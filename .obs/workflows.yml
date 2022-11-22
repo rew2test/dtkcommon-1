@@ -13,7 +13,7 @@ pullrequest_check_build:
                 target_repository: Arch_Community
             architectures:
               - x86_64
-           - name: Deepin_v20
+          - name: Deepin_v20
             paths:
               - target_project: deepin:test:SRC
                 target_repository: Deepin_20
