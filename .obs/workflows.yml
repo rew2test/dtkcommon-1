@@ -1,16 +1,16 @@
 pullrequest_check_build:
   steps:
     - link_package:
-        source_project: deepin:test:SRC
+        source_project: home:tsic:src
         source_package: dtkcommon
-        target_project: deepin:test:CI
+        target_project: home:tsic:CI
     - configure_repositories:
-        project: deepin:test:CI
+        project: home:tsic:CI
         repositories:
           - name: Arch
             paths:
-              - target_project: deepin:test:SRC
-                target_repository: Arch_Community
+              - target_project: home:tsic:src
+                target_repository: Arch
             architectures:
               - x86_64
   filters:
