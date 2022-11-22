@@ -1,15 +1,15 @@
 pullrequest_check_build:
   steps:
     - link_package:
-        source_project: home:tsic:src
+        source_project: home:Tsic:src
         source_package: dtkcommon
-        target_project: home:tsic:CI
+        target_project: home:Tsic:CI
     - configure_repositories:
-        project: home:tsic:CI
+        project: home:Tsic:CI
         repositories:
           - name: Arch
             paths:
-              - target_project: home:tsic:src
+              - target_project: home:Tsic:src
                 target_repository: Arch
             architectures:
               - x86_64
