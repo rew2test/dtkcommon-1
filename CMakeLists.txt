@@ -1,7 +1,6 @@
 # SPDX-FileCopyrightText: 2022 Uniontech Software Technology Co.,Ltd.
 #
 # SPDX-License-Identifier: BSD-3-Clause
-
 cmake_minimum_required(VERSION 3.10)
 #set(DVERSION "5.5.22")
 option(DVERSION "define project version" "5.5.22")
