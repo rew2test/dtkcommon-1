@@ -1,5 +1,4 @@
 ## dtkcommon
-
 A public project for building DTK Library
 
 ## Dependencies
