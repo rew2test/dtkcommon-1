@@ -24,19 +24,11 @@ pullrequest_check_build:
   filters:
     event: pull_request
 
-rebuild_tag:
-  steps:
-    - trigger_services:
-        project: home:rewine:src
-        package: dtkcore
-  filters:
-    event: tag_push
-
 rebuild_push:
   steps:
     - trigger_services:
-        project: home:rewine
-        package: dtkcore
+      project: home:rewine:s1
+        package: dtkcommon
   filters:
     event: push
 
