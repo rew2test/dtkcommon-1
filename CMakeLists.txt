@@ -19,6 +19,7 @@ set(LINUXNAME "debian")
 option(LINUXNAME "linuxname" "debian")
 set(SPECPATH "qt5/mkspecs/")
 
+if (${LINUXNAME} STREQUAL "archlinux")
   set(SPECPATH "qt/mkspecs/")
   message("arch")
 endif()
